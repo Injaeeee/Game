@@ -74,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,9 +90,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Asset\" />
     <Folder Include="Container\" />
     <Folder Include="Panel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\UI\Icon_SoundOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\UI\Icon_SoundOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\마법사\마법사오른쪽스텐딩.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\마법사\마법사왼쪽스텐딩.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

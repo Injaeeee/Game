@@ -18,10 +18,14 @@ namespace TheGreatWizardAdventure
             InitializeComponent();
         }
 
-        private void Start(object sender, EventArgs e)
+
+
+        private void START(object sender, EventArgs e)
         {
             GameForm showForm = new GameForm();
+            this.Hide();
             showForm.ShowDialog();
+
         }
     }
 }

@@ -28,50 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
+            this.PLAYBUTTON = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PLAYBUTTON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // PLAYBUTTON
             // 
-            this.button1.Location = new System.Drawing.Point(283, 121);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 111);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "시작~하겠습니다";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Start);
+            this.PLAYBUTTON.BackColor = System.Drawing.Color.Transparent;
+            this.PLAYBUTTON.Image = ((System.Drawing.Image)(resources.GetObject("PLAYBUTTON.Image")));
+            this.PLAYBUTTON.Location = new System.Drawing.Point(151, 49);
+            this.PLAYBUTTON.Name = "PLAYBUTTON";
+            this.PLAYBUTTON.Size = new System.Drawing.Size(422, 107);
+            this.PLAYBUTTON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PLAYBUTTON.TabIndex = 1;
+            this.PLAYBUTTON.TabStop = false;
+            this.PLAYBUTTON.Click += new System.EventHandler(this.START);
             // 
-            // checkBox1
+            // pictureBox2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(283, 275);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 16);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(40, 55);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(102, 92);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 401);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(634, 556);
+            this.ControlBox = false;
+            this.Controls.Add(this.PLAYBUTTON);
+            this.Controls.Add(this.pictureBox2);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuForm";
-            this.Text = "Form1";
+            this.Text = "  ";
+            ((System.ComponentModel.ISupportInitialize)(this.PLAYBUTTON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox PLAYBUTTON;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
