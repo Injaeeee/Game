@@ -48,20 +48,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(492, 209);
+            this.label1.Font = new System.Drawing.Font("나눔바른고딕OTF", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(1016, 307);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 12);
+            this.label1.Size = new System.Drawing.Size(64, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(494, 240);
+            this.label2.Font = new System.Drawing.Font("나눔바른고딕OTF", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(1016, 338);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 12);
+            this.label2.Size = new System.Drawing.Size(64, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
@@ -91,7 +93,7 @@
             // 
             this.SoundButton.BackColor = System.Drawing.Color.Transparent;
             this.SoundButton.Image = global::TheGreatWizardAdventure.Properties.Resources.Icon_SoundOn;
-            this.SoundButton.Location = new System.Drawing.Point(925, 12);
+            this.SoundButton.Location = new System.Drawing.Point(1666, 12);
             this.SoundButton.Name = "SoundButton";
             this.SoundButton.Size = new System.Drawing.Size(54, 49);
             this.SoundButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -103,7 +105,7 @@
             // 
             this.CloseButton.BackColor = System.Drawing.Color.Transparent;
             this.CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("CloseButton.Image")));
-            this.CloseButton.Location = new System.Drawing.Point(985, 12);
+            this.CloseButton.Location = new System.Drawing.Point(1726, 12);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(54, 49);
             this.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,8 +126,9 @@
             // 
             // magician
             // 
+            this.magician.BackColor = System.Drawing.Color.Transparent;
             this.magician.Image = global::TheGreatWizardAdventure.Properties.Resources.마법사오른쪽스텐딩;
-            this.magician.Location = new System.Drawing.Point(431, 304);
+            this.magician.Location = new System.Drawing.Point(604, 423);
             this.magician.Margin = new System.Windows.Forms.Padding(2);
             this.magician.Name = "magician";
             this.magician.Size = new System.Drawing.Size(157, 161);
@@ -137,7 +140,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 465);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(1786, 584);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.SoundButton);
@@ -146,6 +151,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.magician);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GameForm";
             this.Text = "GameForm";
