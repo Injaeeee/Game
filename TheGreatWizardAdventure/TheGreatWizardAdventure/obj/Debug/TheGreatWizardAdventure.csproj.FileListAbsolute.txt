@@ -1,0 +1,12 @@
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\bin\Debug\TheGreatWizardAdventure.exe.config
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\bin\Debug\TheGreatWizardAdventure.exe
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\bin\Debug\TheGreatWizardAdventure.pdb
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.csproj.AssemblyReference.cache
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.csproj.SuggestedBindingRedirects.cache
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.MenuForm.resources
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.Properties.Resources.resources
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.csproj.GenerateResource.cache
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.csproj.CoreCompileInputs.cache
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.exe
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.pdb
+C:\Users\wwa11\source\repos\TheGreatWizardAdventure\TheGreatWizardAdventure\obj\Debug\TheGreatWizardAdventure.Container.GameForm.resources
