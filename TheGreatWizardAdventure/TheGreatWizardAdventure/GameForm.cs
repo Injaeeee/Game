@@ -10,20 +10,24 @@ using System.Windows.Forms;
 
 namespace TheGreatWizardAdventure.Container
 {
-    public class Charactor
-    {
-
-    }
-
-    static public class Mouse
-    {
-        static int mouseX;
-        static int mouseY;
-    }
-
     public partial class GameForm : Form
     {
+        public class Charactor
+        {
 
+        }
+
+        static public class Mouse
+        {
+            public static int MouseX { get; private set; }
+            public static int MouseY { get; private set; }
+
+            public static void UpdateMousePosition(int x, int y)
+            {
+                MouseX = x;
+                MouseY = y;
+            }
+        }
 
         public GameForm()
         {
@@ -53,14 +57,20 @@ namespace TheGreatWizardAdventure.Container
         {
             for (; ; )
             {
-   
+                if (Mouse.MouseX > 900)
+                {
+                    charactor.Location.X
+                }
+                else
+                {
+
+                }
             }
         }
 
         private void GameForm_MouseMove(object sender, MouseEventArgs e)
         {
-            mouseX = e.Location.X;
-            mouseY = e.Location.Y;
+            Mouse.UpdateMousePosition(e.Location.X, e.Location.Y);
             label1.Text = e.Location.X.ToString();
             label2.Text = e.Location.Y.ToString();
         }

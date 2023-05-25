@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.charactor = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charactor)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // charactor
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(276, 353);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 311);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.charactor.Image = ((System.Drawing.Image)(resources.GetObject("charactor.Image")));
+            this.charactor.Location = new System.Drawing.Point(276, 353);
+            this.charactor.Name = "charactor";
+            this.charactor.Size = new System.Drawing.Size(169, 311);
+            this.charactor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.charactor.TabIndex = 0;
+            this.charactor.TabStop = false;
             // 
             // label1
             // 
@@ -70,11 +70,11 @@
             this.ClientSize = new System.Drawing.Size(1501, 847);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.charactor);
             this.Name = "GameForm";
             this.Text = "GameForm";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GameForm_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charactor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,7 +82,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox charactor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
