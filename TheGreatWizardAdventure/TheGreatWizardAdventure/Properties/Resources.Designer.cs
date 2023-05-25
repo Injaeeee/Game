@@ -83,6 +83,26 @@ namespace TheGreatWizardAdventure.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 마법사오른쪽걷기 {
+            get {
+                object obj = ResourceManager.GetObject("마법사오른쪽걷기", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 마법사오른쪽빔 {
+            get {
+                object obj = ResourceManager.GetObject("마법사오른쪽빔", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 마법사오른쪽스텐딩 {
             get {
                 object obj = ResourceManager.GetObject("마법사오른쪽스텐딩", resourceCulture);
@@ -93,9 +113,59 @@ namespace TheGreatWizardAdventure.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 마법사왼쪽걷기 {
+            get {
+                object obj = ResourceManager.GetObject("마법사왼쪽걷기", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 마법사왼쪽빔 {
+            get {
+                object obj = ResourceManager.GetObject("마법사왼쪽빔", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 마법사왼쪽스텐딩 {
             get {
                 object obj = ResourceManager.GetObject("마법사왼쪽스텐딩", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 몬스터오른쪽스텐딩 {
+            get {
+                object obj = ResourceManager.GetObject("몬스터오른쪽스텐딩", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 몬스터왼쪽걷기 {
+            get {
+                object obj = ResourceManager.GetObject("몬스터왼쪽걷기", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 몬스터왼쪽스텐딩 {
+            get {
+                object obj = ResourceManager.GetObject("몬스터왼쪽스텐딩", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

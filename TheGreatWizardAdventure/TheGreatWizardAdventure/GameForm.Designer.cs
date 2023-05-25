@@ -37,12 +37,22 @@
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.magician = new System.Windows.Forms.PictureBox();
+            this.Monster = new System.Windows.Forms.PictureBox();
+            this.Monster2 = new System.Windows.Forms.PictureBox();
+            this.RightLaser = new System.Windows.Forms.PictureBox();
+            this.leftlaser = new System.Windows.Forms.PictureBox();
+            this.Characterface = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightLaser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +81,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(124, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(229, 25);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 49);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -82,7 +92,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(68, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(173, 25);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 49);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +127,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(117, 25);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -128,21 +138,88 @@
             // 
             this.magician.BackColor = System.Drawing.Color.Transparent;
             this.magician.Image = global::TheGreatWizardAdventure.Properties.Resources.마법사오른쪽스텐딩;
-            this.magician.Location = new System.Drawing.Point(604, 423);
+            this.magician.Location = new System.Drawing.Point(822, 467);
             this.magician.Margin = new System.Windows.Forms.Padding(2);
             this.magician.Name = "magician";
-            this.magician.Size = new System.Drawing.Size(157, 161);
+            this.magician.Size = new System.Drawing.Size(109, 119);
             this.magician.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.magician.TabIndex = 0;
             this.magician.TabStop = false;
+            // 
+            // Monster
+            // 
+            this.Monster.BackColor = System.Drawing.Color.Transparent;
+            this.Monster.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터오른쪽스텐딩;
+            this.Monster.Location = new System.Drawing.Point(239, 467);
+            this.Monster.Margin = new System.Windows.Forms.Padding(2);
+            this.Monster.Name = "Monster";
+            this.Monster.Size = new System.Drawing.Size(109, 119);
+            this.Monster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Monster.TabIndex = 9;
+            this.Monster.TabStop = false;
+            this.Monster.Click += new System.EventHandler(this.Monster_Click);
+            // 
+            // Monster2
+            // 
+            this.Monster2.BackColor = System.Drawing.Color.Transparent;
+            this.Monster2.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터왼쪽걷기;
+            this.Monster2.Location = new System.Drawing.Point(1406, 467);
+            this.Monster2.Margin = new System.Windows.Forms.Padding(2);
+            this.Monster2.Name = "Monster2";
+            this.Monster2.Size = new System.Drawing.Size(109, 119);
+            this.Monster2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Monster2.TabIndex = 10;
+            this.Monster2.TabStop = false;
+            this.Monster2.Click += new System.EventHandler(this.Monster_Click);
+            // 
+            // RightLaser
+            // 
+            this.RightLaser.BackColor = System.Drawing.Color.Transparent;
+            this.RightLaser.Image = ((System.Drawing.Image)(resources.GetObject("RightLaser.Image")));
+            this.RightLaser.Location = new System.Drawing.Point(962, 467);
+            this.RightLaser.Margin = new System.Windows.Forms.Padding(2);
+            this.RightLaser.Name = "RightLaser";
+            this.RightLaser.Size = new System.Drawing.Size(413, 140);
+            this.RightLaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RightLaser.TabIndex = 11;
+            this.RightLaser.TabStop = false;
+            // 
+            // leftlaser
+            // 
+            this.leftlaser.BackColor = System.Drawing.Color.Transparent;
+            this.leftlaser.Image = ((System.Drawing.Image)(resources.GetObject("leftlaser.Image")));
+            this.leftlaser.Location = new System.Drawing.Point(383, 467);
+            this.leftlaser.Margin = new System.Windows.Forms.Padding(2);
+            this.leftlaser.Name = "leftlaser";
+            this.leftlaser.Size = new System.Drawing.Size(413, 140);
+            this.leftlaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.leftlaser.TabIndex = 12;
+            this.leftlaser.TabStop = false;
+            // 
+            // Characterface
+            // 
+            this.Characterface.BackColor = System.Drawing.Color.Transparent;
+            this.Characterface.Image = ((System.Drawing.Image)(resources.GetObject("Characterface.Image")));
+            this.Characterface.Location = new System.Drawing.Point(12, -5);
+            this.Characterface.Name = "Characterface";
+            this.Characterface.Size = new System.Drawing.Size(99, 93);
+            this.Characterface.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Characterface.TabIndex = 13;
+            this.Characterface.TabStop = false;
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1786, 584);
+            this.ControlBox = false;
+            this.Controls.Add(this.Characterface);
+            this.Controls.Add(this.leftlaser);
+            this.Controls.Add(this.Monster2);
+            this.Controls.Add(this.Monster);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.SoundButton);
@@ -151,10 +228,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.magician);
+            this.Controls.Add(this.RightLaser);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GameForm";
-            this.Text = "GameForm";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.GameForm_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GameForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -163,6 +241,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightLaser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Characterface)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +261,10 @@
         private System.Windows.Forms.PictureBox SoundButton;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox Monster;
+        private System.Windows.Forms.PictureBox Monster2;
+        private System.Windows.Forms.PictureBox RightLaser;
+        private System.Windows.Forms.PictureBox leftlaser;
+        private System.Windows.Forms.PictureBox Characterface;
     }
 }

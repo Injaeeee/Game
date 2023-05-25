@@ -118,16 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="마법사오른쪽스텐딩" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\마법사\마법사오른쪽스텐딩.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="마법사왼쪽빔" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\마법사\마법사왼쪽빔.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="마법사왼쪽스텐딩" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\마법사\마법사왼쪽스텐딩.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="몬스터왼쪽걷기" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\몬스터\몬스터왼쪽걷기.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_SoundOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Asset\UI\Icon_SoundOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="마법사오른쪽스텐딩" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\마법사\마법사오른쪽스텐딩.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="몬스터왼쪽스텐딩" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\몬스터\몬스터왼쪽스텐딩.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_SoundOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Asset\UI\Icon_SoundOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="마법사왼쪽스텐딩" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Asset\마법사\마법사왼쪽스텐딩.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="마법사왼쪽걷기" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\마법사\마법사왼쪽걷기.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="마법사오른쪽걷기" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\마법사\마법사오른쪽걷기.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="몬스터오른쪽스텐딩" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\몬스터\몬스터오른쪽스텐딩.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="마법사오른쪽빔" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Asset\마법사\마법사오른쪽빔.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

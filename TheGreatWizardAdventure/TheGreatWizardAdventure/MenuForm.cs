@@ -27,5 +27,12 @@ namespace TheGreatWizardAdventure
             showForm.ShowDialog();
 
         }
+
+        private void EXITBUTTON_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+
+        }
     }
 }

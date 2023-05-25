@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TheGreatWizardAdventure.Container
 {
 
@@ -23,8 +24,9 @@ namespace TheGreatWizardAdventure.Container
         {
             InitializeComponent();
             init();
-
+          
             gamePlay();
+            
             
 
         }
@@ -35,10 +37,7 @@ namespace TheGreatWizardAdventure.Container
             
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void mousePosition()
         {
@@ -48,19 +47,12 @@ namespace TheGreatWizardAdventure.Container
 
         private void gamePlay()
         {
-            /*
-            for (; ; )
-            {
-                if (Cursor.Position.X > 500)
-                {
-                    magician.Image = Properties.Resources.마법사오른쪽스텐딩;
-                }
-                else
-                {
-                    magician.Image = Properties.Resources.마법사왼쪽스텐딩;
-                }
-            }
-            */
+      
+
+    
+            
+            
+            
         }
 
         private void GameForm_MouseMove(object sender, MouseEventArgs e)
@@ -69,11 +61,30 @@ namespace TheGreatWizardAdventure.Container
             //mouseY = e.Location.Y;
             label1.Text = e.Location.X.ToString();
             label2.Text = e.Location.Y.ToString();
+
+            if (Cursor.Position.X > 900)
+            {
+                magician.Image = Properties.Resources.마법사오른쪽스텐딩;
+                if(Cursor.Position.X > 1100)
+                    magician.Image = Properties.Resources.마법사오른쪽걷기;
+
+
+            }
+            else
+            {
+                magician.Image = Properties.Resources.마법사왼쪽스텐딩;
+                if(Cursor.Position.X < 600)
+                    magician.Image = Properties.Resources.마법사왼쪽걷기;
+            }
+
+            RightLaser.Visible = false;
+            leftlaser.Visible = false;
         }
 
         private void GameForm_Load(object sender, EventArgs e)
         {
-
+            RightLaser.Visible = false;
+            leftlaser.Visible = false;
         }
 
         private void SoundButton_Click(object sender, EventArgs e)
@@ -93,10 +104,25 @@ namespace TheGreatWizardAdventure.Container
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             MenuForm showForm = new MenuForm();
-              this.Hide();
+            this.Hide();
             showForm.ShowDialog();
 
 
+        }
+
+        private void Monster_Click(object sender, EventArgs e)
+        {
+            if (Cursor.Position.X > 880)
+            {
+                magician.Image = Properties.Resources.마법사오른쪽빔;
+                RightLaser.Visible = true;
+
+            }
+            else
+            {
+                magician.Image = Properties.Resources.마법사왼쪽빔;
+                leftlaser.Visible = true;
+            }
         }
     }
 }

@@ -105,5 +105,26 @@
   <ItemGroup>
     <None Include="Asset\마법사\마법사왼쪽스텐딩.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\마법사\마법사오른쪽걷기.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\마법사\마법사왼쪽걷기.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\몬스터\몬스터오른쪽스텐딩.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\마법사\마법사왼쪽빔.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\몬스터\몬스터왼쪽스텐딩.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\몬스터\몬스터왼쪽걷기.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\마법사\마법사오른쪽빔.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
