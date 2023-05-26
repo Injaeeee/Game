@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,19 +38,17 @@
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.magician = new System.Windows.Forms.PictureBox();
-            this.Monster = new System.Windows.Forms.PictureBox();
-            this.Monster2 = new System.Windows.Forms.PictureBox();
             this.RightLaser = new System.Windows.Forms.PictureBox();
             this.leftlaser = new System.Windows.Forms.PictureBox();
             this.Characterface = new System.Windows.Forms.PictureBox();
+            this.Gametimer = new System.Windows.Forms.Timer(this.components);
+            this.timeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
@@ -146,37 +145,11 @@
             this.magician.TabIndex = 0;
             this.magician.TabStop = false;
             // 
-            // Monster
-            // 
-            this.Monster.BackColor = System.Drawing.Color.Transparent;
-            this.Monster.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터오른쪽스텐딩;
-            this.Monster.Location = new System.Drawing.Point(239, 467);
-            this.Monster.Margin = new System.Windows.Forms.Padding(2);
-            this.Monster.Name = "Monster";
-            this.Monster.Size = new System.Drawing.Size(109, 119);
-            this.Monster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Monster.TabIndex = 9;
-            this.Monster.TabStop = false;
-            this.Monster.Click += new System.EventHandler(this.Monster_Click);
-            // 
-            // Monster2
-            // 
-            this.Monster2.BackColor = System.Drawing.Color.Transparent;
-            this.Monster2.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터왼쪽걷기;
-            this.Monster2.Location = new System.Drawing.Point(1406, 467);
-            this.Monster2.Margin = new System.Windows.Forms.Padding(2);
-            this.Monster2.Name = "Monster2";
-            this.Monster2.Size = new System.Drawing.Size(109, 119);
-            this.Monster2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Monster2.TabIndex = 10;
-            this.Monster2.TabStop = false;
-            this.Monster2.Click += new System.EventHandler(this.Monster_Click);
-            // 
             // RightLaser
             // 
             this.RightLaser.BackColor = System.Drawing.Color.Transparent;
             this.RightLaser.Image = ((System.Drawing.Image)(resources.GetObject("RightLaser.Image")));
-            this.RightLaser.Location = new System.Drawing.Point(962, 467);
+            this.RightLaser.Location = new System.Drawing.Point(966, 467);
             this.RightLaser.Margin = new System.Windows.Forms.Padding(2);
             this.RightLaser.Name = "RightLaser";
             this.RightLaser.Size = new System.Drawing.Size(413, 140);
@@ -207,6 +180,21 @@
             this.Characterface.TabIndex = 13;
             this.Characterface.TabStop = false;
             // 
+            // Gametimer
+            // 
+            this.Gametimer.Tick += new System.EventHandler(this.Gametimer_Tick);
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("나눔바른고딕OTF", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.timeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timeLabel.Location = new System.Drawing.Point(1441, 25);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(186, 40);
+            this.timeLabel.TabIndex = 14;
+            this.timeLabel.Text = "TimeLabel";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -216,10 +204,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1786, 584);
             this.ControlBox = false;
+            this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.Characterface);
-            this.Controls.Add(this.leftlaser);
-            this.Controls.Add(this.Monster2);
-            this.Controls.Add(this.Monster);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.SoundButton);
@@ -228,6 +214,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.magician);
+            this.Controls.Add(this.leftlaser);
             this.Controls.Add(this.RightLaser);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -241,8 +228,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).EndInit();
@@ -261,10 +246,10 @@
         private System.Windows.Forms.PictureBox SoundButton;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox Monster;
-        private System.Windows.Forms.PictureBox Monster2;
         private System.Windows.Forms.PictureBox RightLaser;
         private System.Windows.Forms.PictureBox leftlaser;
         private System.Windows.Forms.PictureBox Characterface;
+        private System.Windows.Forms.Timer Gametimer;
+        private System.Windows.Forms.Label timeLabel;
     }
 }
