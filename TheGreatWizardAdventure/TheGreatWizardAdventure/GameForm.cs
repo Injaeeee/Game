@@ -73,6 +73,7 @@ namespace TheGreatWizardAdventure.Container
         {
             InitializeComponent();
 
+            GenerateMonster();
             timeLimit = 100; // 시간 제한 설정 (초 단위)
             timer = new Timer();
             timer.Interval = 1000; // 1초마다 타이머 이벤트 발생
@@ -132,24 +133,6 @@ namespace TheGreatWizardAdventure.Container
             g4 = MoveBackgroundLayer(g4, player.direction, 5);
 
             Invalidate();
-
-            for (int i = 0; i < monsterCount; i++)
-            {
-                PictureBox monster = new PictureBox();
-                monster.Image = Properties.Resources.몬스터왼쪽스텐딩; // 몬스터 이미지 설정
-                monster.SizeMode = PictureBoxSizeMode.StretchImage; // 이미지 크기 조절 옵션
-                monster.Width = 109;
-                monster.Height = 119;
-                monster.BackColor = Color.Transparent;
-                monster.Left = random.Next(0, this.Width - monster.Width); // 랜덤한 X 좌표
-                monster.Top = 467; // 바닥에 고정된 Y 좌표
-                monster.Click += Monster_Click; // 몬스터 클릭 이벤트 핸들러 연결
-                monster.Tag = 0; // 클릭 횟수 초기화
-
-
-                monsters.Add(monster); // 생성한 몬스터를 리스트에 추가
-                this.Controls.Add(monster); // 몬스터를 Form에 추가하여 보이도록 설정
-            }
         }
 
         private int MoveBackgroundLayer(int position, string direction, int speed)
@@ -191,7 +174,26 @@ namespace TheGreatWizardAdventure.Container
 
         //================================================================================================================
 
+        private void GenerateMonster()
+        {
+            for (int i = 0; i < monsterCount; i++)
+            {
+                PictureBox monster = new PictureBox();
+                monster.Image = Properties.Resources.몬스터왼쪽스텐딩; // 몬스터 이미지 설정
+                monster.SizeMode = PictureBoxSizeMode.StretchImage; // 이미지 크기 조절 옵션
+                monster.Width = 109;
+                monster.Height = 119;
+                monster.BackColor = Color.Transparent;
+                monster.Left = random.Next(0, this.Width - monster.Width); // 랜덤한 X 좌표
+                monster.Top = 467; // 바닥에 고정된 Y 좌표
+                monster.Click += Monster_Click; // 몬스터 클릭 이벤트 핸들러 연결
+                monster.Tag = 0; // 클릭 횟수 초기화
 
+
+                monsters.Add(monster); // 생성한 몬스터를 리스트에 추가
+                this.Controls.Add(monster); // 몬스터를 Form에 추가하여 보이도록 설정
+            }
+        }
         private void GameForm_MouseMove(object sender, MouseEventArgs e)
         {
             Mouse.UpdateMousePosition(e.Location.X, e.Location.Y);

@@ -34,8 +34,6 @@ namespace TheGreatWizardAdventure.Container
             this.label2 = new System.Windows.Forms.Label();
             this.Characterface = new System.Windows.Forms.PictureBox();
             this.leftlaser = new System.Windows.Forms.PictureBox();
-            this.Monster2 = new System.Windows.Forms.PictureBox();
-            this.Monster = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.SoundButton = new System.Windows.Forms.PictureBox();
@@ -47,8 +45,6 @@ namespace TheGreatWizardAdventure.Container
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster)).BeginInit();
             this.leftlaser = new System.Windows.Forms.PictureBox();
             this.Characterface = new System.Windows.Forms.PictureBox();
             this.Gametimer = new System.Windows.Forms.Timer(this.components);
@@ -106,32 +102,6 @@ namespace TheGreatWizardAdventure.Container
             this.leftlaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.leftlaser.TabIndex = 12;
             this.leftlaser.TabStop = false;
-            // 
-            // Monster2
-            // 
-            this.Monster2.BackColor = System.Drawing.Color.Transparent;
-            this.Monster2.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터왼쪽걷기;
-            this.Monster2.Location = new System.Drawing.Point(1406, 467);
-            this.Monster2.Margin = new System.Windows.Forms.Padding(2);
-            this.Monster2.Name = "Monster2";
-            this.Monster2.Size = new System.Drawing.Size(109, 119);
-            this.Monster2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Monster2.TabIndex = 10;
-            this.Monster2.TabStop = false;
-            this.Monster2.Click += new System.EventHandler(this.Monster_Click);
-            // 
-            // Monster
-            // 
-            this.Monster.BackColor = System.Drawing.Color.Transparent;
-            this.Monster.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터오른쪽스텐딩;
-            this.Monster.Location = new System.Drawing.Point(239, 467);
-            this.Monster.Margin = new System.Windows.Forms.Padding(2);
-            this.Monster.Name = "Monster";
-            this.Monster.Size = new System.Drawing.Size(109, 119);
-            this.Monster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Monster.TabIndex = 9;
-            this.Monster.TabStop = false;
-            this.Monster.Click += new System.EventHandler(this.Monster_Click);
             // 
             // pictureBox4
             // 
@@ -276,8 +246,6 @@ namespace TheGreatWizardAdventure.Container
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GameForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundButton)).EndInit();
