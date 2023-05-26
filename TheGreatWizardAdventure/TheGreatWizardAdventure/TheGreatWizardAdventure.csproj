@@ -126,5 +126,23 @@
   <ItemGroup>
     <None Include="Asset\마법사\마법사오른쪽빔.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\background\Forest-Layers\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\background\Forest-Layers\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\background\Forest-Layers\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\background\Forest-Layers\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\background\Forest-Layers\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\background\Forest-Layers\6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

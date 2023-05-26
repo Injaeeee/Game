@@ -28,54 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Characterface = new System.Windows.Forms.PictureBox();
+            this.leftlaser = new System.Windows.Forms.PictureBox();
+            this.Monster2 = new System.Windows.Forms.PictureBox();
+            this.Monster = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.SoundButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.magician = new System.Windows.Forms.PictureBox();
-            this.Monster = new System.Windows.Forms.PictureBox();
-            this.Monster2 = new System.Windows.Forms.PictureBox();
             this.RightLaser = new System.Windows.Forms.PictureBox();
-            this.leftlaser = new System.Windows.Forms.PictureBox();
-            this.Characterface = new System.Windows.Forms.PictureBox();
+            this.BackgroundTimer = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightLaser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔바른고딕OTF", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(1016, 307);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 22);
+            this.label1.Size = new System.Drawing.Size(66, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔바른고딕OTF", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(1016, 338);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 22);
+            this.label2.Size = new System.Drawing.Size(66, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
+            // 
+            // Characterface
+            // 
+            this.Characterface.BackColor = System.Drawing.Color.Transparent;
+            this.Characterface.Image = ((System.Drawing.Image)(resources.GetObject("Characterface.Image")));
+            this.Characterface.Location = new System.Drawing.Point(12, -5);
+            this.Characterface.Name = "Characterface";
+            this.Characterface.Size = new System.Drawing.Size(99, 93);
+            this.Characterface.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Characterface.TabIndex = 13;
+            this.Characterface.TabStop = false;
+            // 
+            // leftlaser
+            // 
+            this.leftlaser.BackColor = System.Drawing.Color.Transparent;
+            this.leftlaser.Image = ((System.Drawing.Image)(resources.GetObject("leftlaser.Image")));
+            this.leftlaser.Location = new System.Drawing.Point(383, 467);
+            this.leftlaser.Margin = new System.Windows.Forms.Padding(2);
+            this.leftlaser.Name = "leftlaser";
+            this.leftlaser.Size = new System.Drawing.Size(413, 140);
+            this.leftlaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.leftlaser.TabIndex = 12;
+            this.leftlaser.TabStop = false;
+            // 
+            // Monster2
+            // 
+            this.Monster2.BackColor = System.Drawing.Color.Transparent;
+            this.Monster2.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터왼쪽걷기;
+            this.Monster2.Location = new System.Drawing.Point(1406, 467);
+            this.Monster2.Margin = new System.Windows.Forms.Padding(2);
+            this.Monster2.Name = "Monster2";
+            this.Monster2.Size = new System.Drawing.Size(109, 119);
+            this.Monster2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Monster2.TabIndex = 10;
+            this.Monster2.TabStop = false;
+            this.Monster2.Click += new System.EventHandler(this.Monster_Click);
+            // 
+            // Monster
+            // 
+            this.Monster.BackColor = System.Drawing.Color.Transparent;
+            this.Monster.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터오른쪽스텐딩;
+            this.Monster.Location = new System.Drawing.Point(239, 467);
+            this.Monster.Margin = new System.Windows.Forms.Padding(2);
+            this.Monster.Name = "Monster";
+            this.Monster.Size = new System.Drawing.Size(109, 119);
+            this.Monster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Monster.TabIndex = 9;
+            this.Monster.TabStop = false;
+            this.Monster.Click += new System.EventHandler(this.Monster_Click);
             // 
             // pictureBox4
             // 
@@ -146,32 +198,6 @@
             this.magician.TabIndex = 0;
             this.magician.TabStop = false;
             // 
-            // Monster
-            // 
-            this.Monster.BackColor = System.Drawing.Color.Transparent;
-            this.Monster.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터오른쪽스텐딩;
-            this.Monster.Location = new System.Drawing.Point(239, 467);
-            this.Monster.Margin = new System.Windows.Forms.Padding(2);
-            this.Monster.Name = "Monster";
-            this.Monster.Size = new System.Drawing.Size(109, 119);
-            this.Monster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Monster.TabIndex = 9;
-            this.Monster.TabStop = false;
-            this.Monster.Click += new System.EventHandler(this.Monster_Click);
-            // 
-            // Monster2
-            // 
-            this.Monster2.BackColor = System.Drawing.Color.Transparent;
-            this.Monster2.Image = global::TheGreatWizardAdventure.Properties.Resources.몬스터왼쪽걷기;
-            this.Monster2.Location = new System.Drawing.Point(1406, 467);
-            this.Monster2.Margin = new System.Windows.Forms.Padding(2);
-            this.Monster2.Name = "Monster2";
-            this.Monster2.Size = new System.Drawing.Size(109, 119);
-            this.Monster2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Monster2.TabIndex = 10;
-            this.Monster2.TabStop = false;
-            this.Monster2.Click += new System.EventHandler(this.Monster_Click);
-            // 
             // RightLaser
             // 
             this.RightLaser.BackColor = System.Drawing.Color.Transparent;
@@ -184,38 +210,32 @@
             this.RightLaser.TabIndex = 11;
             this.RightLaser.TabStop = false;
             // 
-            // leftlaser
+            // BackgroundTimer
             // 
-            this.leftlaser.BackColor = System.Drawing.Color.Transparent;
-            this.leftlaser.Image = ((System.Drawing.Image)(resources.GetObject("leftlaser.Image")));
-            this.leftlaser.Location = new System.Drawing.Point(383, 467);
-            this.leftlaser.Margin = new System.Windows.Forms.Padding(2);
-            this.leftlaser.Name = "leftlaser";
-            this.leftlaser.Size = new System.Drawing.Size(413, 140);
-            this.leftlaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.leftlaser.TabIndex = 12;
-            this.leftlaser.TabStop = false;
+            this.BackgroundTimer.Enabled = true;
+            this.BackgroundTimer.Interval = 10;
+            this.BackgroundTimer.Tick += new System.EventHandler(this.BackgroundTimer_Tick);
             // 
-            // Characterface
+            // label3
             // 
-            this.Characterface.BackColor = System.Drawing.Color.Transparent;
-            this.Characterface.Image = ((System.Drawing.Image)(resources.GetObject("Characterface.Image")));
-            this.Characterface.Location = new System.Drawing.Point(12, -5);
-            this.Characterface.Name = "Characterface";
-            this.Characterface.Size = new System.Drawing.Size(99, 93);
-            this.Characterface.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Characterface.TabIndex = 13;
-            this.Characterface.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(1016, 371);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 24);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "label3";
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1786, 584);
+            this.ClientSize = new System.Drawing.Size(1784, 581);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Characterface);
             this.Controls.Add(this.leftlaser);
             this.Controls.Add(this.Monster2);
@@ -234,18 +254,19 @@
             this.Name = "GameForm";
             this.Text = " ";
             this.Load += new System.EventHandler(this.GameForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameForm_Paint);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GameForm_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.Characterface)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Monster2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightLaser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftlaser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Characterface)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +287,7 @@
         private System.Windows.Forms.PictureBox RightLaser;
         private System.Windows.Forms.PictureBox leftlaser;
         private System.Windows.Forms.PictureBox Characterface;
+        private System.Windows.Forms.Timer BackgroundTimer;
+        private System.Windows.Forms.Label label3;
     }
 }
