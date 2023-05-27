@@ -23,7 +23,7 @@ namespace TheGreatWizardAdventure.Container
         private List<PictureBox> monsters = new List<PictureBox>(); // 몬스터들을 담을 리스트
         private Random random = new Random(); // 랜덤 숫자 생성을 위한 인스턴스
 
-
+        // layer size 620 * 360
         Image layer_1 = Properties.Resources.flayer_1;
         Image layer_2 = Properties.Resources.flayer_2;
         Image layer_3 = Properties.Resources.flayer_4;
