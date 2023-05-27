@@ -30,8 +30,6 @@ namespace TheGreatWizardAdventure.Container
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.BackgroundTimer = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.Gametimer = new System.Windows.Forms.Timer(this.components);
@@ -45,6 +43,8 @@ namespace TheGreatWizardAdventure.Container
             this.magician = new System.Windows.Forms.PictureBox();
             this.leftlaser = new System.Windows.Forms.PictureBox();
             this.RightLaser = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart2)).BeginInit();
@@ -56,28 +56,6 @@ namespace TheGreatWizardAdventure.Container
             ((System.ComponentModel.ISupportInitialize)(this.RightLaser)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(1016, 307);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(1016, 338);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
             // BackgroundTimer
             // 
             this.BackgroundTimer.Enabled = true;
@@ -87,8 +65,9 @@ namespace TheGreatWizardAdventure.Container
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(1016, 371);
+            this.label3.Location = new System.Drawing.Point(845, 288);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 24);
@@ -102,6 +81,7 @@ namespace TheGreatWizardAdventure.Container
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
+            this.timeLabel.BackColor = System.Drawing.Color.Transparent;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.timeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.timeLabel.Location = new System.Drawing.Point(1441, 25);
@@ -179,7 +159,7 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.magician.BackColor = System.Drawing.Color.Transparent;
             this.magician.Image = global::TheGreatWizardAdventure.Properties.Resources.마법사오른쪽스텐딩;
-            this.magician.Location = new System.Drawing.Point(820, 351);
+            this.magician.Location = new System.Drawing.Point(821, 365);
             this.magician.Margin = new System.Windows.Forms.Padding(2);
             this.magician.Name = "magician";
             this.magician.Size = new System.Drawing.Size(109, 119);
@@ -210,6 +190,30 @@ namespace TheGreatWizardAdventure.Container
             this.RightLaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.RightLaser.TabIndex = 11;
             this.RightLaser.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(845, 224);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(845, 255);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
             // 
             // GameForm
             // 
@@ -256,8 +260,6 @@ namespace TheGreatWizardAdventure.Container
         #endregion
 
         private System.Windows.Forms.PictureBox magician;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox Heart3;
         private System.Windows.Forms.PictureBox CloseButton;
         private System.Windows.Forms.PictureBox SoundButton;
@@ -270,5 +272,7 @@ namespace TheGreatWizardAdventure.Container
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer Gametimer;
         private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

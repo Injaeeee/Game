@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BossMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BossMode.Designer.cs">
+      <DependentUpon>BossMode.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BossMode.resx">
+      <DependentUpon>BossMode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
     </EmbeddedResource>

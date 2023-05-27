@@ -86,7 +86,7 @@ namespace TheGreatWizardAdventure.Container
             InitializeComponent();
 
             GenerateMonster();
-            timeLimit = 100; // 시간 제한 설정 (초 단위)
+            timeLimit = 2; // 시간 제한 설정 (초 단위)
             timer = new Timer();
             timer.Interval = 1000; // 1초마다 타이머 이벤트 발생
             timer.Tick += Gametimer_Tick;
@@ -352,6 +352,9 @@ namespace TheGreatWizardAdventure.Container
                 timer.Stop(); // 타이머 정지
                 MessageBox.Show("최종 보스 등장!");
                 // 이 다음 폼을 새로 열까 ? ..
+                BossMode showForm = new BossMode();
+                this.Hide();
+                showForm.ShowDialog();
             }
         }
 
