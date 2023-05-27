@@ -143,6 +143,13 @@ namespace TheGreatWizardAdventure.Container
 
         public void BackgroundMove(Player player)
         {
+
+            // Update 플레이어 위치
+            Player.UpdatePlayerPosition(magician.Location.X, magician.Location.Y);
+
+            // 플레이어 이동 방향 계산
+            PlayerDirection(Player.player, Mouse.MouseX);
+
             // layer_1 움직임
             b1 = MoveBackgroundLayer(b1, player.direction, 2);
             b2 = MoveBackgroundLayer(b2, player.direction, 2);
@@ -161,11 +168,26 @@ namespace TheGreatWizardAdventure.Container
             g3 = MoveBackgroundLayer(g3, player.direction, 5);
             g4 = MoveBackgroundLayer(g4, player.direction, 5);
 
+            // 몬스터를 움직임 배경에 맞춰서!
+            foreach (PictureBox monster in monsters)
+            {
+                monster.Left = MoveBackgroundLayer(monster.Left, player.direction, 2);
+            }
             Invalidate();
         }
 
         private int MoveBackgroundLayer(int position, string direction, int speed)
         {
+            //방향 및 속도를 기준으로 새 위치 계산
+            if (direction == "right")
+            {
+                position -= speed;
+            }
+            else if (direction == "left")
+            {
+                position += speed;
+            }
+
             if (position < -620)
             {
                 position = 1800;
@@ -175,14 +197,7 @@ namespace TheGreatWizardAdventure.Container
                 position = -620;
             }
 
-            if (direction == "right")
-            {
-                position -= speed;
-            }
-            else if (direction == "left")
-            {
-                position += speed;
-            }
+
 
             return position;
         }
@@ -194,6 +209,9 @@ namespace TheGreatWizardAdventure.Container
 
         private void RepaintHP(Charactor charactor)
         {
+            string n = charactor.HP.ToString();
+            n = "Heart" + n;
+
             for (int i = 1; i <= charactor.HP; i++)
             {
                 string heartControlName = "Heart" + i.ToString();

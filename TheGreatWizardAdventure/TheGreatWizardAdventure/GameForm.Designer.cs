@@ -89,9 +89,10 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(1451, 556);
+            this.label3.Location = new System.Drawing.Point(1016, 371);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 33);
+            this.label3.Size = new System.Drawing.Size(66, 24);
             this.label3.TabIndex = 14;
             this.label3.Text = "label3";
             // 
@@ -160,10 +161,9 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.SoundButton.BackColor = System.Drawing.Color.Transparent;
             this.SoundButton.Image = global::TheGreatWizardAdventure.Properties.Resources.Icon_SoundOn;
-            this.SoundButton.Location = new System.Drawing.Point(2380, 18);
-            this.SoundButton.Margin = new System.Windows.Forms.Padding(4);
+            this.SoundButton.Location = new System.Drawing.Point(1666, 12);
             this.SoundButton.Name = "SoundButton";
-            this.SoundButton.Size = new System.Drawing.Size(77, 74);
+            this.SoundButton.Size = new System.Drawing.Size(54, 49);
             this.SoundButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SoundButton.TabIndex = 6;
             this.SoundButton.TabStop = false;
@@ -173,10 +173,9 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.CloseButton.BackColor = System.Drawing.Color.Transparent;
             this.CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("CloseButton.Image")));
-            this.CloseButton.Location = new System.Drawing.Point(2466, 18);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseButton.Location = new System.Drawing.Point(1726, 12);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(77, 74);
+            this.CloseButton.Size = new System.Drawing.Size(54, 49);
             this.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CloseButton.TabIndex = 5;
             this.CloseButton.TabStop = false;
@@ -186,10 +185,9 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.Heart3.BackColor = System.Drawing.Color.Transparent;
             this.Heart3.Image = global::TheGreatWizardAdventure.Properties.Resources.empty_heart;
-            this.Heart3.Location = new System.Drawing.Point(350, 38);
-            this.Heart3.Margin = new System.Windows.Forms.Padding(4);
+            this.Heart3.Location = new System.Drawing.Point(245, 25);
             this.Heart3.Name = "Heart3";
-            this.Heart3.Size = new System.Drawing.Size(71, 74);
+            this.Heart3.Size = new System.Drawing.Size(50, 49);
             this.Heart3.TabIndex = 4;
             this.Heart3.TabStop = false;
             // 
@@ -220,9 +218,10 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.RightLaser.BackColor = System.Drawing.Color.Transparent;
             this.RightLaser.Image = ((System.Drawing.Image)(resources.GetObject("RightLaser.Image")));
-            this.RightLaser.Location = new System.Drawing.Point(1391, 500);
+            this.RightLaser.Location = new System.Drawing.Point(974, 333);
+            this.RightLaser.Margin = new System.Windows.Forms.Padding(2);
             this.RightLaser.Name = "RightLaser";
-            this.RightLaser.Size = new System.Drawing.Size(590, 210);
+            this.RightLaser.Size = new System.Drawing.Size(413, 140);
             this.RightLaser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.RightLaser.TabIndex = 11;
             this.RightLaser.TabStop = false;
@@ -242,7 +241,7 @@ namespace TheGreatWizardAdventure.Container
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(2549, 722);
+            this.ClientSize = new System.Drawing.Size(1784, 481);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.leftlaser);
