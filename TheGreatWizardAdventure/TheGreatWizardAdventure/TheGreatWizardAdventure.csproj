@@ -144,5 +144,44 @@
   <ItemGroup>
     <None Include="Asset\background\Forest-Layers\6.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Hearts\PNG\basic\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Hearts\PNG\basic\border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Hearts\PNG\basic\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Hearts\PNG\basic\empty-heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Hearts\PNG\basic\full-heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Hearts\PNG\basic\half-heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Warped shooting fx files\Warped shooting fx files\Pixelart\Bolt\bolt-preview-big.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Warped shooting fx files\Warped shooting fx files\Pixelart\Bolt\bolt.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Warped shooting fx files\Warped shooting fx files\Pixelart\Bolt\bolt-big.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Warped shooting fx files\Warped shooting fx files\Pixelart\Bolt\bolt-big1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Warped shooting fx files\Warped shooting fx files\Pixelart\Bolt\bolt-big2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Warped shooting fx files\Warped shooting fx files\Pixelart\Bolt\bolt-big3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Warped shooting fx files\Warped shooting fx files\Pixelart\Bolt\bolt-big4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

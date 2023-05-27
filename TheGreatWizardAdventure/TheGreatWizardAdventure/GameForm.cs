@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 using static TheGreatWizardAdventure.Container.GameForm;
-
 
 namespace TheGreatWizardAdventure.Container
 {
     public partial class GameForm : Form
     {
-        
+
         bool soundcheck = true;
         private int timeLimit;
         private Timer timer;
@@ -28,6 +28,9 @@ namespace TheGreatWizardAdventure.Container
         Image layer_2 = Properties.Resources.flayer_2;
         Image layer_3 = Properties.Resources.flayer_4;
 
+        // monster
+        Image monster = Properties.Resources.몬스터오른쪽스텐딩;
+
         int b1 = 0, b2 = 600, b3 = 1200, b4 = 1800, x1 = 0, x2 = 600, x3 = 1200, x4 = 1800, g1 = 0, g2 = 600, g3 = 1200, g4 = 1800;
 
         public class Charactor
@@ -37,6 +40,7 @@ namespace TheGreatWizardAdventure.Container
             public int speed;
             public bool isMove;
             public String direction;
+            public int HP;
         }
 
         public class Player : Charactor
@@ -47,7 +51,8 @@ namespace TheGreatWizardAdventure.Container
                 y = 0,
                 speed = 0,
                 isMove = false,
-                direction = "none"
+                direction = "none",
+                HP = 3
             };
 
             public static void UpdatePlayerPosition(int x, int y)
@@ -55,6 +60,24 @@ namespace TheGreatWizardAdventure.Container
                 player.x = x;
                 player.y = y;
             }
+
+            //public void RepaintHP(int HP)
+            //{
+            //   // 현재 HP 번의 하트의 상태를 변경해주면 되잖아
+
+            //}
+        }
+
+        public class Monster : Charactor
+        {
+
+        }
+
+        public class Spell
+        {
+            int speed;
+            bool isHit = false;
+            Charactor target;
         }
 
         static public class Mouse
@@ -94,8 +117,14 @@ namespace TheGreatWizardAdventure.Container
             e.Graphics.DrawImage(layer_3, g2, 0);
             e.Graphics.DrawImage(layer_3, g3, 0);
             e.Graphics.DrawImage(layer_3, g4, 0);
+
+            e.Graphics.DrawImage(monster, 367, 400);
+
+            Image currentFrame = frames[currentFrameIndex];
+            e.Graphics.DrawImage(currentFrame, positionX, positionY);
+            
         }
-        
+
         public void PlayerDirection(Player player, int x)
         {
             if (player.x < x)
@@ -163,7 +192,164 @@ namespace TheGreatWizardAdventure.Container
             BackgroundMove(Player.player);
         }
 
+        private void RepaintHP(Charactor charactor)
+        {
+            for (int i = 1; i <= charactor.HP; i++)
+            {
+                string heartControlName = "Heart" + i.ToString();
+                PictureBox heartPictureBox = Controls.Find(heartControlName, true).FirstOrDefault() as PictureBox;
+
+                if (heartPictureBox != null)
+                {
+                    heartPictureBox.Image = Properties.Resources.full_heart;
+                }
+            }
+
+            // 남은 하트를 투명하게 그리기
+            for (int i = charactor.HP + 1; i <= 3; i++)
+            {
+                string heartControlName = "Heart" + i.ToString();
+                PictureBox heartPictureBox = Controls.Find(heartControlName, true).FirstOrDefault() as PictureBox;
+
+                if (heartPictureBox != null)
+                {
+                    heartPictureBox.Image = Properties.Resources.empty_heart;
+                }
+            }
+
+            if (charactor.HP == 0)
+            {
+                GameOver();
+            }
+        }
+
+        private void ReduceHP()
+        {
+            bool isHit = true;
+            if (isHit)
+            {
+                Player.player.HP -= 1;
+            }
+        }
+
+        private void AttackMonster(Charactor target)
+        {
+            int x = Player.player.x;
+            int y = Player.player.y;
+
+            Image spell = Properties.Resources.bolt_big;
+            Timer spellTimer = new Timer();
+            spellTimer.Interval = 10;
+            spellTimer.Tick += (sender, e) =>
+            {
+                x -= 30;
+
+                if (x <= 0)
+                {
+                    spellTimer.Stop();
+                    spellTimer.Dispose();
+                }
+
+                Invalidate();
+            };
+
+            Paint += (sender, e) =>
+            {
+                e.Graphics.DrawImage(spell, x, y);
+            };
+
+            spellTimer.Start();
+        }
+
+        Timer ttimer;
+        int currentFrameIndex;
+        int animationSpeed;
+        int positionX;
+        int positionY;
+        Image[] frames;
+
+        private void AttackTest()
+        {
+
+            frames = new Image[]
+            {
+                Properties.Resources.bolt_big1,
+                Properties.Resources.bolt_big2,
+                Properties.Resources.bolt_big3,
+                Properties.Resources.bolt_big4
+            };
+
+            DoubleBuffered = true;
+            frames = LoadGifFrames(); // Gif 이미지의 프레임들을 로드합니다
+            currentFrameIndex = 0;
+            animationSpeed = 100; // 이미지 전환 속도 (밀리초)
+            positionX = magician.Location.X;
+            positionY = magician.Location.Y;
+
+            timer = new Timer();
+            timer.Interval = animationSpeed;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+ 
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // 이미지 프레임 전환
+            currentFrameIndex = (currentFrameIndex + 1) % frames.Length;
+
+            // 위치 이동
+            positionX -= 30; // 이동 속도
+
+            // 화면 갱신
+            Invalidate();
+        }
+
+
+        private Image[] LoadGifFrames()
+        {
+            Image[] frames = new Image[]
+            {
+                Properties.Resources.bolt_big1,
+                Properties.Resources.bolt_big2,
+                Properties.Resources.bolt_big3,
+                Properties.Resources.bolt_big4
+            };
+            return frames;
+        }
+
+        private void GameOver()
+        {
+
+        }
+
+        private void Characterface_Click(object sender, EventArgs e)
+        {
+            RepaintHP(Player.player);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Player.player.HP -= 1;
+            RepaintHP(Player.player);
+
+            leftlaser.Parent = magician;
+            leftlaser.Location =
+                new Point(
+                    leftlaser.Location.X
+                    - magician.Location.X,
+                    leftlaser.Location.Y
+                    - magician.Location.Y);
+
+                      
+        }
+
         //================================================================================================================
+
+
+
+
 
 
 
@@ -185,10 +371,9 @@ namespace TheGreatWizardAdventure.Container
                 monster.Height = 119;
                 monster.BackColor = Color.Transparent;
                 monster.Left = random.Next(0, this.Width - monster.Width); // 랜덤한 X 좌표
-                monster.Top = 467; // 바닥에 고정된 Y 좌표
+                monster.Top = 367; // 바닥에 고정된 Y 좌표
                 monster.Click += Monster_Click; // 몬스터 클릭 이벤트 핸들러 연결
                 monster.Tag = 0; // 클릭 횟수 초기화
-
 
                 monsters.Add(monster); // 생성한 몬스터를 리스트에 추가
                 this.Controls.Add(monster); // 몬스터를 Form에 추가하여 보이도록 설정
@@ -227,6 +412,8 @@ namespace TheGreatWizardAdventure.Container
             timeLabel.Text = "Time: " + timeLimit.ToString();
             leftlaser.SendToBack(); // 왼쪽 레이저를 최하위로 가져옴
             RightLaser.SendToBack(); // 오른쪽 레이저를 최하위로 가져옴 - 몬스터보다 레이저가 뒤로 가야함
+
+            AttackTest();
         }
 
         private void SoundButton_Click(object sender, EventArgs e)
@@ -248,8 +435,6 @@ namespace TheGreatWizardAdventure.Container
             MenuForm showForm = new MenuForm();
             this.Hide();
             showForm.ShowDialog();
-
-
         }
 
         private void Monster_Click(object sender, EventArgs e)
@@ -265,6 +450,8 @@ namespace TheGreatWizardAdventure.Container
                 magician.Image = Properties.Resources.마법사왼쪽빔;
                 leftlaser.Visible = true;
             }
+
+            //AttackMonster(Player.player);
 
             PictureBox monster = (PictureBox)sender;
             int currentClicks = int.Parse(monster.Tag.ToString()); // 현재 몬스터의 클릭 횟수를 가져옴
