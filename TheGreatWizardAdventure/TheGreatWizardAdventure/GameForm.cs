@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static TheGreatWizardAdventure.Container.GameForm;
 
-
 namespace TheGreatWizardAdventure.Container
 {
     public partial class GameForm : Form
@@ -37,6 +36,7 @@ namespace TheGreatWizardAdventure.Container
             public int speed;
             public bool isMove;
             public String direction;
+            public int HP;
         }
 
         public class Player : Charactor
@@ -47,7 +47,8 @@ namespace TheGreatWizardAdventure.Container
                 y = 0,
                 speed = 0,
                 isMove = false,
-                direction = "none"
+                direction = "none",
+                HP = 3
             };
 
             public static void UpdatePlayerPosition(int x, int y)
@@ -55,6 +56,17 @@ namespace TheGreatWizardAdventure.Container
                 player.x = x;
                 player.y = y;
             }
+
+            //public void RepaintHP(int HP)
+            //{
+            //   // 현재 HP 번의 하트의 상태를 변경해주면 되잖아
+
+            //}
+        }
+
+        public class Monster : Charactor
+        {
+
         }
 
         static public class Mouse
@@ -163,7 +175,40 @@ namespace TheGreatWizardAdventure.Container
             BackgroundMove(Player.player);
         }
 
+        private void RepaintHP(Charactor charactor)
+        {
+            string n = charactor.HP.ToString();
+            n = "Heart" + n;
+
+            for (int i = 1; i <= charactor.HP; i++)
+            {
+                string heartControlName = "Heart" + i.ToString();
+                PictureBox heartPictureBox = Controls.Find(heartControlName, true).FirstOrDefault() as PictureBox;
+
+                if (heartPictureBox != null)
+                {
+                    heartPictureBox.Image = Properties.Resources.full_heart;
+                }
+            }
+
+            // 남은 하트를 투명하게 그리기
+            for (int i = charactor.HP + 1; i <= 3; i++)
+            {
+                string heartControlName = "Heart" + i.ToString();
+                PictureBox heartPictureBox = Controls.Find(heartControlName, true).FirstOrDefault() as PictureBox;
+
+                if (heartPictureBox != null)
+                {
+                    heartPictureBox.Image = Properties.Resources.empty_heart;
+                }
+            }
+        }
+
         //================================================================================================================
+
+
+
+
 
 
 
@@ -185,10 +230,9 @@ namespace TheGreatWizardAdventure.Container
                 monster.Height = 119;
                 monster.BackColor = Color.Transparent;
                 monster.Left = random.Next(0, this.Width - monster.Width); // 랜덤한 X 좌표
-                monster.Top = 467; // 바닥에 고정된 Y 좌표
+                monster.Top = 367; // 바닥에 고정된 Y 좌표
                 monster.Click += Monster_Click; // 몬스터 클릭 이벤트 핸들러 연결
                 monster.Tag = 0; // 클릭 횟수 초기화
-
 
                 monsters.Add(monster); // 생성한 몬스터를 리스트에 추가
                 this.Controls.Add(monster); // 몬스터를 Form에 추가하여 보이도록 설정
@@ -248,8 +292,6 @@ namespace TheGreatWizardAdventure.Container
             MenuForm showForm = new MenuForm();
             this.Hide();
             showForm.ShowDialog();
-
-
         }
 
         private void Monster_Click(object sender, EventArgs e)
