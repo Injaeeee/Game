@@ -15,7 +15,7 @@ namespace TheGreatWizardAdventure.Container
     public partial class GameForm : Form
     {
 
-        bool soundcheck = true;
+        bool soundcheck = true; // 음향사운드 온오프
         private int timeLimit;
         private Timer timer;
         private int monsterCount = 5; // 각 몬스터의 클릭 횟수
@@ -121,7 +121,7 @@ namespace TheGreatWizardAdventure.Container
             e.Graphics.DrawImage(monster, 367, 400);
 
             Image currentFrame = frames[currentFrameIndex];
-            e.Graphics.DrawImage(currentFrame, positionX, positionY);
+           // e.Graphics.DrawImage(currentFrame, positionX, positionY);
             
         }
 
