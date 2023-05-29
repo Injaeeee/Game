@@ -97,7 +97,7 @@ namespace TheGreatWizardAdventure.Container
             InitializeComponent();
 
             GenerateMonster();
-            timeLimit = 2; // 시간 제한 설정 (초 단위)
+            timeLimit = 1; // 시간 제한 설정 (초 단위)
             timer = new Timer();
             timer.Interval = 1000; // 1초마다 타이머 이벤트 발생
             timer.Tick += Gametimer_Tick;
@@ -120,7 +120,7 @@ namespace TheGreatWizardAdventure.Container
 
             e.Graphics.DrawImage(monster, 367, 400);
 
-            Image currentFrame = frames[currentFrameIndex];
+           // Image currentFrame = frames[currentFrameIndex];
            // e.Graphics.DrawImage(currentFrame, positionX, positionY);
             
         }
@@ -285,7 +285,7 @@ namespace TheGreatWizardAdventure.Container
         int positionX;
         int positionY;
         Image[] frames;
-
+        /*
         private void AttackTest()
         {
 
@@ -310,7 +310,7 @@ namespace TheGreatWizardAdventure.Container
             timer.Start();
         }
 
- 
+ */
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -324,7 +324,7 @@ namespace TheGreatWizardAdventure.Container
             Invalidate();
         }
 
-
+        /*
         private Image[] LoadGifFrames()
         {
             Image[] frames = new Image[]
@@ -335,7 +335,7 @@ namespace TheGreatWizardAdventure.Container
                 Properties.Resources.bolt_big4
             };
             return frames;
-        }
+        }*/
 
         private void GameOver()
         {
@@ -431,7 +431,7 @@ namespace TheGreatWizardAdventure.Container
             leftlaser.SendToBack(); // 왼쪽 레이저를 최하위로 가져옴
             RightLaser.SendToBack(); // 오른쪽 레이저를 최하위로 가져옴 - 몬스터보다 레이저가 뒤로 가야함
 
-            AttackTest();
+            //AttackTest();
         }
 
         private void SoundButton_Click(object sender, EventArgs e)

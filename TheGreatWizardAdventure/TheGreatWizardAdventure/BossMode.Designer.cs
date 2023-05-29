@@ -31,24 +31,41 @@ namespace TheGreatWizardAdventure
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BossMode));
+            this.movementTimer = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.magician = new System.Windows.Forms.PictureBox();
             this.Characterface = new System.Windows.Forms.PictureBox();
             this.Heart1 = new System.Windows.Forms.PictureBox();
             this.Heart2 = new System.Windows.Forms.PictureBox();
             this.SoundButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.Heart3 = new System.Windows.Forms.PictureBox();
-            this.magician = new System.Windows.Forms.PictureBox();
             this.Boss = new System.Windows.Forms.PictureBox();
-            this.movementTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Boss)).BeginInit();
             this.SuspendLayout();
+            // 
+            // movementTimer
+            // 
+            this.movementTimer.Tick += new System.EventHandler(this.movementTimer_Tick);
+            // 
+            // magician
+            // 
+            this.magician.BackColor = System.Drawing.Color.Transparent;
+            this.magician.Image = global::TheGreatWizardAdventure.Properties.Resources.마법사오른쪽스텐딩;
+            this.magician.Location = new System.Drawing.Point(816, 367);
+            this.magician.Margin = new System.Windows.Forms.Padding(2);
+            this.magician.Name = "magician";
+            this.magician.Size = new System.Drawing.Size(109, 119);
+            this.magician.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.magician.TabIndex = 21;
+            this.magician.TabStop = false;
             // 
             // Characterface
             // 
@@ -115,23 +132,11 @@ namespace TheGreatWizardAdventure
             this.Heart3.TabIndex = 15;
             this.Heart3.TabStop = false;
             // 
-            // magician
-            // 
-            this.magician.BackColor = System.Drawing.Color.Transparent;
-            this.magician.Image = global::TheGreatWizardAdventure.Properties.Resources.마법사오른쪽스텐딩;
-            this.magician.Location = new System.Drawing.Point(816, 367);
-            this.magician.Margin = new System.Windows.Forms.Padding(2);
-            this.magician.Name = "magician";
-            this.magician.Size = new System.Drawing.Size(109, 119);
-            this.magician.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.magician.TabIndex = 21;
-            this.magician.TabStop = false;
-            // 
             // Boss
             // 
             this.Boss.BackColor = System.Drawing.Color.Transparent;
-            this.Boss.Image = ((System.Drawing.Image)(resources.GetObject("Boss.Image")));
-            this.Boss.Location = new System.Drawing.Point(738, 77);
+            this.Boss.Image = global::TheGreatWizardAdventure.Properties.Resources.Boss반전;
+            this.Boss.Location = new System.Drawing.Point(1449, 89);
             this.Boss.Margin = new System.Windows.Forms.Padding(2);
             this.Boss.Name = "Boss";
             this.Boss.Size = new System.Drawing.Size(271, 286);
@@ -139,10 +144,6 @@ namespace TheGreatWizardAdventure
             this.Boss.TabIndex = 22;
             this.Boss.TabStop = false;
             this.Boss.Click += new System.EventHandler(this.Boss_Click);
-            // 
-            // movementTimer
-            // 
-            this.movementTimer.Tick += new System.EventHandler(this.movementTimer_Tick);
             // 
             // BossMode
             // 
@@ -160,14 +161,15 @@ namespace TheGreatWizardAdventure
             this.Controls.Add(this.Boss);
             this.Name = "BossMode";
             this.Text = "  ";
+            this.Load += new System.EventHandler(this.BossMode_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BossMode_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.magician)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Heart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magician)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Boss)).EndInit();
             this.ResumeLayout(false);
 
@@ -184,5 +186,6 @@ namespace TheGreatWizardAdventure
         private System.Windows.Forms.PictureBox magician;
         private System.Windows.Forms.PictureBox Boss;
         private System.Windows.Forms.Timer movementTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }
