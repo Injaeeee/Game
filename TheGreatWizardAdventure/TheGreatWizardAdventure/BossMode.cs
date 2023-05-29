@@ -26,6 +26,7 @@ namespace TheGreatWizardAdventure
 
         private int bossClickCounter; // 보스 클릭 카운터 변수
 
+
         public BossMode()
         {
             InitializeComponent();
@@ -37,7 +38,12 @@ namespace TheGreatWizardAdventure
             rockTimer.Interval = 2000; // 2초마다 타이머 이벤트 발생
             rockTimer.Tick += RockTimer_Tick; // 돌이 떨어지는 동작을 처리하는 이벤트 핸들러 연결
             rockTimer.Start(); // 타이머 시작
+
+    
         }
+
+
+
         private void InitializeMovement()
         {
             this.MouseMove += BossMode_MouseMove;
@@ -46,6 +52,16 @@ namespace TheGreatWizardAdventure
 
         private void RockTimer_Tick(object sender, EventArgs e)
         {
+
+            Boss.Image = Properties.Resources.보스스킬;
+            Task.Delay(1000).ContinueWith(_ =>
+            {
+                this.Invoke((MethodInvoker)(() =>
+                {
+                    Boss.Image = Properties.Resources.Boss반전; // 원래 보스 이미지로 되돌리기
+               
+                }));
+            });
             // 돌이 떨어지는 동작을 구현합니다.
             int rockCount = random2.Next(3, 6); // 3개에서 5개 사이의 돌을 랜덤으로 생성
 
@@ -90,16 +106,16 @@ namespace TheGreatWizardAdventure
                                    
             Boss.Image = Properties.Resources.보스피격;
 
-            if (Cursor.Position.X > 880)
+            if (magician.Location.X < Boss.Location.X)
             {
                 magician.Image = Properties.Resources.마법사오른쪽빔;
-                //RightLaser.Visible = true;
+               
 
             }
             else
             {
                 magician.Image = Properties.Resources.마법사왼쪽빔;
-                //leftlaser.Visible = true;
+                
             }
 
 
@@ -127,6 +143,10 @@ namespace TheGreatWizardAdventure
             // 클릭 횟수 증가
             bossClickCounter++;
 
+            // 보스 체력 감소
+            bossHealthBar.Value = Math.Max(0, bossHealthBar.Value - 1); // 체력이 0보다 작아지지 않도록 조정
+
+
             // 보스를 10번 클릭하면 사라지게 함
             if (bossClickCounter >= 10)
             {
@@ -140,8 +160,10 @@ namespace TheGreatWizardAdventure
            
                         this.Controls.Remove(Boss); // 보스를 폼에서 제거
                         Boss.Dispose(); // 보스에 할당된 리소스 해제
+                        MessageBox.Show("승리");
                     }));
                 });
+
                 return;
             }
             else
@@ -202,7 +224,7 @@ namespace TheGreatWizardAdventure
 
             if (isMoving && !isBossClicked) // 캐릭터가 보스 클릭 상태가 아니라면 계속 이동
             {
-                if (Cursor.Position.X > 880)
+                if (Cursor.Position.X > magician.Location.X)
                 {
                     MoveCharacterRight();
                     magician.Image = Properties.Resources.마법사오른쪽걷기;
@@ -284,7 +306,7 @@ namespace TheGreatWizardAdventure
 
         private void MoveBossUp()
         {
-            int newY = Boss.Location.Y - 10; // 위로 이동할 거리를 조정
+            int newY = Boss.Location.Y - 3; // 위로 이동할 거리를 조정
             int minTopY = 0; // 이동 가능한 최소 위쪽 Y 좌표
 
             if (newY >= minTopY)
@@ -295,7 +317,7 @@ namespace TheGreatWizardAdventure
 
         private void MoveBossDown()
         {
-            int newY = Boss.Location.Y + 10; // 아래로 이동할 거리를 조정
+            int newY = Boss.Location.Y + 3; // 아래로 이동할 거리를 조정
             int maxBottomY = ClientRectangle.Height - Boss.Height; // 이동 가능한 최대 아래쪽 Y 좌표
 
             if (newY <= maxBottomY)

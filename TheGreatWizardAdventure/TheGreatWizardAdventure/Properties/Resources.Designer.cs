@@ -323,6 +323,16 @@ namespace TheGreatWizardAdventure.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 보스스킬 {
+            get {
+                object obj = ResourceManager.GetObject("보스스킬", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 보스죽음 {
             get {
                 object obj = ResourceManager.GetObject("보스죽음", resourceCulture);

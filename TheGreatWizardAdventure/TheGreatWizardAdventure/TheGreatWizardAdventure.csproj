@@ -204,5 +204,8 @@
   <ItemGroup>
     <None Include="Asset\보스죽음.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\보스스킬.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

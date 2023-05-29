@@ -125,7 +125,7 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.SoundButton.BackColor = System.Drawing.Color.Transparent;
             this.SoundButton.Image = global::TheGreatWizardAdventure.Properties.Resources.Icon_SoundOn;
-            this.SoundButton.Location = new System.Drawing.Point(1666, 12);
+            this.SoundButton.Location = new System.Drawing.Point(1662, 6);
             this.SoundButton.Name = "SoundButton";
             this.SoundButton.Size = new System.Drawing.Size(54, 49);
             this.SoundButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +137,7 @@ namespace TheGreatWizardAdventure.Container
             // 
             this.CloseButton.BackColor = System.Drawing.Color.Transparent;
             this.CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("CloseButton.Image")));
-            this.CloseButton.Location = new System.Drawing.Point(1726, 12);
+            this.CloseButton.Location = new System.Drawing.Point(1722, 6);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(54, 49);
             this.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
