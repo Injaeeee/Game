@@ -97,7 +97,7 @@ namespace TheGreatWizardAdventure.Container
             InitializeComponent();
 
             GenerateMonster();
-            timeLimit = 1; // 시간 제한 설정 (초 단위)
+            timeLimit = 30; // 시간 제한 설정 (초 단위)
             timer = new Timer();
             timer.Interval = 1000; // 1초마다 타이머 이벤트 발생
             timer.Tick += Gametimer_Tick;
@@ -291,10 +291,8 @@ namespace TheGreatWizardAdventure.Container
 
             frames = new Image[]
             {
-                Properties.Resources.bolt_big1,
-                Properties.Resources.bolt_big2,
-                Properties.Resources.bolt_big3,
-                Properties.Resources.bolt_big4
+                Properties.Resour  
+        es.bolt_big4
             };
 
             DoubleBuffered = true;

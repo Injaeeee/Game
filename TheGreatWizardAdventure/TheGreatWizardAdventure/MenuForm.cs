@@ -11,6 +11,8 @@ using TheGreatWizardAdventure.Container;
 
 namespace TheGreatWizardAdventure
 {
+
+
     public partial class MenuForm : Form
     {
         public MenuForm()
@@ -30,9 +32,16 @@ namespace TheGreatWizardAdventure
 
         private void EXITBUTTON_Click(object sender, EventArgs e)
         {
-
+            
             this.Close();
 
+        }
+
+        private void GuideButton_Click(object sender, EventArgs e)
+        {
+            GuideForm showForm = new GuideForm();
+            this.Hide();
+            showForm.ShowDialog();
         }
     }
 }

@@ -34,11 +34,15 @@
             this.EXITBUTTON = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.GuideButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PLAYBUTTON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EXITBUTTON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuideButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PLAYBUTTON
@@ -98,6 +102,29 @@
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
             // 
+            // GuideButton
+            // 
+            this.GuideButton.BackColor = System.Drawing.Color.Transparent;
+            this.GuideButton.Image = ((System.Drawing.Image)(resources.GetObject("GuideButton.Image")));
+            this.GuideButton.Location = new System.Drawing.Point(146, 331);
+            this.GuideButton.Name = "GuideButton";
+            this.GuideButton.Size = new System.Drawing.Size(422, 107);
+            this.GuideButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GuideButton.TabIndex = 6;
+            this.GuideButton.TabStop = false;
+            this.GuideButton.Click += new System.EventHandler(this.GuideButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 337);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -108,6 +135,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(637, 703);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.GuideButton);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.EXITBUTTON);
             this.Controls.Add(this.PLAYBUTTON);
@@ -122,6 +151,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EXITBUTTON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuideButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,6 +163,8 @@
         private System.Windows.Forms.PictureBox EXITBUTTON;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox GuideButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -145,7 +145,7 @@ namespace TheGreatWizardAdventure
 
             // 보스 체력 감소
             bossHealthBar.Value = Math.Max(0, bossHealthBar.Value - 1); // 체력이 0보다 작아지지 않도록 조정
-
+ 
 
             // 보스를 10번 클릭하면 사라지게 함
             if (bossClickCounter >= 10)
@@ -160,7 +160,9 @@ namespace TheGreatWizardAdventure
            
                         this.Controls.Remove(Boss); // 보스를 폼에서 제거
                         Boss.Dispose(); // 보스에 할당된 리소스 해제
-                        MessageBox.Show("승리");
+                        ClearForm showForm = new ClearForm();
+                        this.Hide();
+                        showForm.ShowDialog();
                     }));
                 });
 
@@ -342,6 +344,7 @@ namespace TheGreatWizardAdventure
 
         private void BossMode_Load(object sender, EventArgs e)
         {
+     
 
         }
     }

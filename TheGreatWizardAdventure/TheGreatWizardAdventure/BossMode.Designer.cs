@@ -33,6 +33,7 @@ namespace TheGreatWizardAdventure
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BossMode));
             this.movementTimer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bossHealthBar = new System.Windows.Forms.ProgressBar();
             this.magician = new System.Windows.Forms.PictureBox();
             this.Characterface = new System.Windows.Forms.PictureBox();
             this.Heart1 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@ namespace TheGreatWizardAdventure
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.Heart3 = new System.Windows.Forms.PictureBox();
             this.Boss = new System.Windows.Forms.PictureBox();
-            this.bossHealthBar = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
@@ -57,6 +57,16 @@ namespace TheGreatWizardAdventure
             // movementTimer
             // 
             this.movementTimer.Tick += new System.EventHandler(this.movementTimer_Tick);
+            // 
+            // bossHealthBar
+            // 
+            this.bossHealthBar.ForeColor = System.Drawing.Color.Red;
+            this.bossHealthBar.Location = new System.Drawing.Point(1430, 42);
+            this.bossHealthBar.Maximum = 10;
+            this.bossHealthBar.Name = "bossHealthBar";
+            this.bossHealthBar.Size = new System.Drawing.Size(209, 23);
+            this.bossHealthBar.TabIndex = 23;
+            this.bossHealthBar.Value = 10;
             // 
             // magician
             // 
@@ -148,23 +158,13 @@ namespace TheGreatWizardAdventure
             this.Boss.TabStop = false;
             this.Boss.Click += new System.EventHandler(this.Boss_Click);
             // 
-            // bossHealthBar
-            // 
-            this.bossHealthBar.ForeColor = System.Drawing.Color.Red;
-            this.bossHealthBar.Location = new System.Drawing.Point(1411, 33);
-            this.bossHealthBar.Maximum = 10;
-            this.bossHealthBar.Name = "bossHealthBar";
-            this.bossHealthBar.Size = new System.Drawing.Size(209, 23);
-            this.bossHealthBar.TabIndex = 23;
-            this.bossHealthBar.Value = 10;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1352, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1343, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(81, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;

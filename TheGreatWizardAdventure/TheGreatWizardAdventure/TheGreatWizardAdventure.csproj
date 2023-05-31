@@ -52,11 +52,65 @@
     <Compile Include="BossMode.Designer.cs">
       <DependentUpon>BossMode.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClearForm.Designer.cs">
+      <DependentUpon>ClearForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GameForm.Designer.cs">
       <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuideForm.Designer.cs">
+      <DependentUpon>GuideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\1.Designer.cs">
+      <DependentUpon>1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\2.Designer.cs">
+      <DependentUpon>2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\3.Designer.cs">
+      <DependentUpon>3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\4.Designer.cs">
+      <DependentUpon>4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\5.Designer.cs">
+      <DependentUpon>5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\6.Designer.cs">
+      <DependentUpon>6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartGuideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartGuideForm.Designer.cs">
+      <DependentUpon>StartGuideForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
@@ -69,8 +123,35 @@
     <EmbeddedResource Include="BossMode.resx">
       <DependentUpon>BossMode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClearForm.resx">
+      <DependentUpon>ClearForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideForm.resx">
+      <DependentUpon>GuideForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\1.resx">
+      <DependentUpon>1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\2.resx">
+      <DependentUpon>2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\3.resx">
+      <DependentUpon>3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\4.resx">
+      <DependentUpon>4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\5.resx">
+      <DependentUpon>5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\6.resx">
+      <DependentUpon>6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartGuideForm.resx">
+      <DependentUpon>StartGuideForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
@@ -100,7 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Container\" />
-    <Folder Include="Panel\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Asset\UI\Icon_SoundOn.png" />
@@ -206,6 +286,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Asset\보스스킬.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\보스시비.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
