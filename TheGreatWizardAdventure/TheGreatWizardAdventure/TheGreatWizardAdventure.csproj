@@ -58,6 +58,12 @@
     <Compile Include="ClearForm.Designer.cs">
       <DependentUpon>ClearForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FailForm.Designer.cs">
+      <DependentUpon>FailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClearForm.resx">
       <DependentUpon>ClearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FailForm.resx">
+      <DependentUpon>FailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
@@ -289,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Asset\보스시비.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\마법사\불마법사오른쪽빔.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TheGreatWizardAdventure.Container;
+
 
 namespace TheGreatWizardAdventure
 {
@@ -24,7 +24,7 @@ namespace TheGreatWizardAdventure
 
         private void START(object sender, EventArgs e)
         {
-            GameForm showForm = new GameForm();
+            StartGuideForm showForm = new StartGuideForm();
             this.Hide();
             showForm.ShowDialog();
 

@@ -40,12 +40,14 @@ namespace TheGreatWizardAdventure
             this.Laser = new System.Windows.Forms.PictureBox();
             this.moveMonstersTimer = new System.Windows.Forms.Timer(this.components);
             this.SkipButton = new System.Windows.Forms.PictureBox();
+            this.guidebutton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Boss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mark2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Laser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SkipButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guidebutton)).BeginInit();
             this.SuspendLayout();
             // 
             // magician
@@ -108,10 +110,10 @@ namespace TheGreatWizardAdventure
             // 
             this.Laser.BackColor = System.Drawing.Color.Transparent;
             this.Laser.Image = ((System.Drawing.Image)(resources.GetObject("Laser.Image")));
-            this.Laser.Location = new System.Drawing.Point(503, 243);
+            this.Laser.Location = new System.Drawing.Point(468, 178);
             this.Laser.Margin = new System.Windows.Forms.Padding(2);
             this.Laser.Name = "Laser";
-            this.Laser.Size = new System.Drawing.Size(238, 162);
+            this.Laser.Size = new System.Drawing.Size(190, 188);
             this.Laser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Laser.TabIndex = 26;
             this.Laser.TabStop = false;
@@ -124,13 +126,25 @@ namespace TheGreatWizardAdventure
             // 
             this.SkipButton.BackColor = System.Drawing.Color.Transparent;
             this.SkipButton.Image = ((System.Drawing.Image)(resources.GetObject("SkipButton.Image")));
-            this.SkipButton.Location = new System.Drawing.Point(458, 100);
+            this.SkipButton.Location = new System.Drawing.Point(200, 89);
             this.SkipButton.Name = "SkipButton";
             this.SkipButton.Size = new System.Drawing.Size(323, 73);
             this.SkipButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SkipButton.TabIndex = 27;
             this.SkipButton.TabStop = false;
             this.SkipButton.Click += new System.EventHandler(this.SkipButton_Click);
+            // 
+            // guidebutton
+            // 
+            this.guidebutton.BackColor = System.Drawing.Color.Transparent;
+            this.guidebutton.Image = ((System.Drawing.Image)(resources.GetObject("guidebutton.Image")));
+            this.guidebutton.Location = new System.Drawing.Point(529, 89);
+            this.guidebutton.Name = "guidebutton";
+            this.guidebutton.Size = new System.Drawing.Size(323, 73);
+            this.guidebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guidebutton.TabIndex = 28;
+            this.guidebutton.TabStop = false;
+            this.guidebutton.Click += new System.EventHandler(this.guidebutton_Click);
             // 
             // StartGuideForm
             // 
@@ -140,6 +154,7 @@ namespace TheGreatWizardAdventure
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1228, 353);
             this.ControlBox = false;
+            this.Controls.Add(this.guidebutton);
             this.Controls.Add(this.SkipButton);
             this.Controls.Add(this.mark2);
             this.Controls.Add(this.Boss);
@@ -155,6 +170,7 @@ namespace TheGreatWizardAdventure
             ((System.ComponentModel.ISupportInitialize)(this.mark2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Laser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SkipButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guidebutton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +186,6 @@ namespace TheGreatWizardAdventure
         private System.Windows.Forms.PictureBox Laser;
         private System.Windows.Forms.Timer moveMonstersTimer;
         private System.Windows.Forms.PictureBox SkipButton;
+        private System.Windows.Forms.PictureBox guidebutton;
     }
 }

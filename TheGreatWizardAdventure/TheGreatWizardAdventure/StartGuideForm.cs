@@ -126,6 +126,7 @@ namespace TheGreatWizardAdventure
                 {
                     moveMonstersTimer.Stop();
                     SkipButton.Visible = true;
+                    guidebutton.Visible = true;
                     foreach (PictureBox m in monsters)
                     {
                         m.Image = Properties.Resources.몬스터왼쪽스텐딩; // 모든 몬스터 이미지 설정
@@ -138,7 +139,7 @@ namespace TheGreatWizardAdventure
         private void SkipButton_Click(object sender, EventArgs e)
         {
 
-            BossMode showFrom = new BossMode();
+            GameForm showFrom = new GameForm();
             this.Hide();
             showFrom.ShowDialog();
         }
@@ -147,6 +148,14 @@ namespace TheGreatWizardAdventure
         {
 
             SkipButton.Visible = false;
+            guidebutton.Visible = false;
+        }
+
+        private void guidebutton_Click(object sender, EventArgs e)
+        {
+            GuideForm showFrom = new GuideForm();
+            this.Hide();
+            showFrom.ShowDialog();
         }
     }
 

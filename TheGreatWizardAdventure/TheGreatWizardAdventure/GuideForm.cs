@@ -128,8 +128,7 @@ namespace TheGreatWizardAdventure
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-
-
+            
             StartGuideForm showForm = new StartGuideForm();
             this.Hide();
             showForm.ShowDialog();

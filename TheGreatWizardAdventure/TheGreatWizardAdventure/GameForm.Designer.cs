@@ -1,4 +1,4 @@
-namespace TheGreatWizardAdventure.Container
+namespace TheGreatWizardAdventure
 {
     partial class GameForm
     {

@@ -33,8 +33,12 @@ namespace TheGreatWizardAdventure
             this.magician = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MenuButton = new System.Windows.Forms.PictureBox();
+            this.CloseButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             this.SuspendLayout();
             // 
             // magician
@@ -71,12 +75,36 @@ namespace TheGreatWizardAdventure
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // MenuButton
+            // 
+            this.MenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.MenuButton.Image = ((System.Drawing.Image)(resources.GetObject("MenuButton.Image")));
+            this.MenuButton.Location = new System.Drawing.Point(599, 158);
+            this.MenuButton.Name = "MenuButton";
+            this.MenuButton.Size = new System.Drawing.Size(155, 41);
+            this.MenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MenuButton.TabIndex = 25;
+            this.MenuButton.TabStop = false;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.BackColor = System.Drawing.Color.Transparent;
+            this.CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("CloseButton.Image")));
+            this.CloseButton.Location = new System.Drawing.Point(599, 205);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(155, 41);
+            this.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CloseButton.TabIndex = 26;
+            this.CloseButton.TabStop = false;
+            // 
             // ClearForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.CloseButton);
+            this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.magician);
             this.Controls.Add(this.pictureBox1);
@@ -84,6 +112,8 @@ namespace TheGreatWizardAdventure
             this.Text = "   ";
             ((System.ComponentModel.ISupportInitialize)(this.magician)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +124,7 @@ namespace TheGreatWizardAdventure
         private System.Windows.Forms.PictureBox magician;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox MenuButton;
+        private System.Windows.Forms.PictureBox CloseButton;
     }
 }

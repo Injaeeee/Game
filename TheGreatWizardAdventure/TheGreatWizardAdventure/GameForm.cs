@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
-using static TheGreatWizardAdventure.Container.GameForm;
 
-namespace TheGreatWizardAdventure.Container
+
+namespace TheGreatWizardAdventure
 {
     public partial class GameForm : Form
     {
@@ -97,7 +97,7 @@ namespace TheGreatWizardAdventure.Container
             InitializeComponent();
 
             GenerateMonster();
-            timeLimit = 30; // 시간 제한 설정 (초 단위)
+            timeLimit = 2; // 시간 제한 설정 (초 단위)
             timer = new Timer();
             timer.Interval = 1000; // 1초마다 타이머 이벤트 발생
             timer.Tick += Gametimer_Tick;
@@ -167,6 +167,7 @@ namespace TheGreatWizardAdventure.Container
             g2 = MoveBackgroundLayer(g2, player.direction, 5);
             g3 = MoveBackgroundLayer(g3, player.direction, 5);
             g4 = MoveBackgroundLayer(g4, player.direction, 5);
+
 
             // 몬스터를 움직임 배경에 맞춰서!
             foreach (PictureBox monster in monsters)

@@ -40,9 +40,9 @@ namespace TheGreatWizardAdventure.Panel
             this.label1.Font = new System.Drawing.Font("나눔바른고딕OTF", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(201, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(545, 24);
+            this.label1.Size = new System.Drawing.Size(526, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "자, 이제 마법사가 숲 속에서 무사히 집으로 돌아가게 해주세요 !";
+            this.label1.Text = "자, 이제 마법사가 숲 속의 평화를 찾을 수 있도록 도와주세요!";
             // 
             // magician
             // 

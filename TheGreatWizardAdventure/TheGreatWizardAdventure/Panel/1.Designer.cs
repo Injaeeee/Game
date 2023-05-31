@@ -38,11 +38,11 @@ namespace TheGreatWizardAdventure.Panel
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔바른고딕OTF", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(108, 85);
+            this.label1.Location = new System.Drawing.Point(120, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(797, 24);
+            this.label1.Size = new System.Drawing.Size(692, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "이 게임은 마법사가 숲 속에서 만난 적들을 물리쳐 안전히 집으로 돌아갈 수 있도록 해야합니다";
+            this.label1.Text = "이 게임은 마법사가 숲 속에서의 적들을 물리쳐 숲의 평화를 찾는 것이 목표입니다";
             // 
             // magician
             // 

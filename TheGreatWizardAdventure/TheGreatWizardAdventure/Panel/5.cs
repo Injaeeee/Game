@@ -16,5 +16,7 @@ namespace TheGreatWizardAdventure.Panel
         {
             InitializeComponent();
         }
+  
+        
     }
 }

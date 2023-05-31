@@ -12,56 +12,82 @@ namespace TheGreatWizardAdventure.Panel
 {
     public partial class _2 : UserControl
     {
-        private int magicianXPosition;
+
+        private const int MovementDistance = 200; // 이동 거리
+        private const int MovementDuration = 2000; // 이동 시간 (2초)
+
         private bool isMovingLeft;
+
+        private int startPosition;
+        private int targetPosition;
+        private int currentDuration;
+        private int animationSteps;
         public _2()
         {
             InitializeComponent();
-            InitializeAnimation();
+            InitializeMovement();
+
         }
-        private void InitializeAnimation()
+
+        private void InitializeMovement()
         {
+            moveTimer = new Timer();
+            moveTimer.Interval = MovementDuration / 100; // 이동 간격 조정
+            moveTimer.Tick += moveTimer_Tick;
 
-            isMovingLeft = true;
+            isMovingLeft = true; // 왼쪽으로 이동 시작
+            startPosition = magician.Left;
+            targetPosition = startPosition - MovementDistance;
+            currentDuration = 0;
+            animationSteps = 100;
 
-            animationTimer = new Timer();
-            animationTimer.Interval = 10; // 애니메이션 속도 조절
-            animationTimer.Tick += animationTimer_Tick;
+            moveTimer.Start();
 
-            animationTimer.Start();
         }
-        private void animationTimer_Tick(object sender, EventArgs e)
+
+        private void moveTimer_Tick(object sender, EventArgs e)
         {
-            const int moveSpeed = 5; // 이동 속도
+            currentDuration++;
+
+            double progress = (double)currentDuration / animationSteps;
+            double interpolation = Math.Pow(progress, 2); // 부드러운 이동을 위해 제곱 함수 사용
+
+            int currentStep = (int)(interpolation * MovementDistance);
 
             if (isMovingLeft)
             {
-                // 좌로 이동
-                if (magicianXPosition > -500)
-                {
-                    magicianXPosition -= moveSpeed;
-                    magician.Location = new Point(magicianXPosition, magician.Location.Y);
-                }
-                // 좌로 이동이 완료되면 이동 방향을 우측으로 변경
-                else
-                {
-                    isMovingLeft = false;
-                }
+                // 왼쪽으로 이동
+                magician.Left = startPosition - currentStep;
+                LEFTMOUSE.Visible = true;
+                RIGHTMOUSE.Visible = false;
+                magician.Image = Properties.Resources.마법사왼쪽걷기;
             }
             else
             {
-                // 우로 이동
-                if (magicianXPosition < 0)
+                // 오른쪽으로 이동
+                magician.Left = startPosition + currentStep;
+                LEFTMOUSE.Visible = false;
+                RIGHTMOUSE.Visible = true;
+                magician.Image = Properties.Resources.마법사오른쪽걷기;
+            }
+
+            if (currentDuration >= animationSteps)
+            {
+                currentDuration = 0;
+                isMovingLeft = !isMovingLeft; // 이동 방향을 반전시킴
+
+                // 이동 방향을 반전시킨 후 바로 다음 방향으로 이동
+                if (isMovingLeft)
                 {
-                    magicianXPosition += moveSpeed;
-                    magician.Location = new Point(magicianXPosition, magician.Location.Y);
+                    startPosition = magician.Left; // 왼쪽으로 이동한 위치를 시작 위치로 설정
+                    targetPosition = startPosition - MovementDistance; // 왼쪽으로 이동하기 위한 목표 위치 설정
                 }
-                // 우로 이동이 완료되면 애니메이션을 멈춤
                 else
                 {
-                    animationTimer.Stop();
+                    startPosition = magician.Left; // 오른쪽으로 이동한 위치를 시작 위치로 설정
+                    targetPosition = startPosition + MovementDistance; // 오른쪽으로 이동하기 위한 목표 위치 설정
                 }
             }
         }
     }
-}
+    }
