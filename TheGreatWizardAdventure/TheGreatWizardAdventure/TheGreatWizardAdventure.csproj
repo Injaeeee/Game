@@ -302,5 +302,20 @@
   <ItemGroup>
     <None Include="Asset\마법사\불마법사오른쪽빔.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\메테오.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\메테1오.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\몬스터\불몬스터왼쪽타격.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\몬스터\몬스터왼쪽죽음.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\몬스터\불몬스터왼쪽스텐딩 .gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

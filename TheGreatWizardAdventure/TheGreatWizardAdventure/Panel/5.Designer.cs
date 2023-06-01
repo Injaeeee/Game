@@ -39,7 +39,7 @@ namespace TheGreatWizardAdventure.Panel
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.magician2 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.magician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Characterface)).BeginInit();
@@ -49,7 +49,7 @@ namespace TheGreatWizardAdventure.Panel
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magician2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,17 +152,17 @@ namespace TheGreatWizardAdventure.Panel
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox5
+            // magician2
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::TheGreatWizardAdventure.Properties.Resources.마법사오른쪽스텐딩;
-            this.pictureBox5.Location = new System.Drawing.Point(739, 218);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(95, 95);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 28;
-            this.pictureBox5.TabStop = false;
+            this.magician2.BackColor = System.Drawing.Color.Transparent;
+            this.magician2.Image = global::TheGreatWizardAdventure.Properties.Resources.마법사오른쪽스텐딩;
+            this.magician2.Location = new System.Drawing.Point(739, 218);
+            this.magician2.Margin = new System.Windows.Forms.Padding(2);
+            this.magician2.Name = "magician2";
+            this.magician2.Size = new System.Drawing.Size(95, 95);
+            this.magician2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.magician2.TabIndex = 28;
+            this.magician2.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -184,7 +184,7 @@ namespace TheGreatWizardAdventure.Panel
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.magician2);
             this.Controls.Add(this.Characterface);
             this.Controls.Add(this.Heart1);
             this.Controls.Add(this.Heart3);
@@ -200,7 +200,7 @@ namespace TheGreatWizardAdventure.Panel
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magician2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -218,7 +218,7 @@ namespace TheGreatWizardAdventure.Panel
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox magician2;
         private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

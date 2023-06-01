@@ -110,10 +110,10 @@ namespace TheGreatWizardAdventure
             // 
             this.Laser.BackColor = System.Drawing.Color.Transparent;
             this.Laser.Image = ((System.Drawing.Image)(resources.GetObject("Laser.Image")));
-            this.Laser.Location = new System.Drawing.Point(468, 178);
+            this.Laser.Location = new System.Drawing.Point(476, 230);
             this.Laser.Margin = new System.Windows.Forms.Padding(2);
             this.Laser.Name = "Laser";
-            this.Laser.Size = new System.Drawing.Size(190, 188);
+            this.Laser.Size = new System.Drawing.Size(154, 140);
             this.Laser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Laser.TabIndex = 26;
             this.Laser.TabStop = false;
@@ -126,7 +126,7 @@ namespace TheGreatWizardAdventure
             // 
             this.SkipButton.BackColor = System.Drawing.Color.Transparent;
             this.SkipButton.Image = ((System.Drawing.Image)(resources.GetObject("SkipButton.Image")));
-            this.SkipButton.Location = new System.Drawing.Point(200, 89);
+            this.SkipButton.Location = new System.Drawing.Point(233, 71);
             this.SkipButton.Name = "SkipButton";
             this.SkipButton.Size = new System.Drawing.Size(323, 73);
             this.SkipButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@ namespace TheGreatWizardAdventure
             // 
             this.guidebutton.BackColor = System.Drawing.Color.Transparent;
             this.guidebutton.Image = ((System.Drawing.Image)(resources.GetObject("guidebutton.Image")));
-            this.guidebutton.Location = new System.Drawing.Point(529, 89);
+            this.guidebutton.Location = new System.Drawing.Point(562, 71);
             this.guidebutton.Name = "guidebutton";
             this.guidebutton.Size = new System.Drawing.Size(323, 73);
             this.guidebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

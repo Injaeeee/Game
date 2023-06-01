@@ -68,11 +68,11 @@ namespace TheGreatWizardAdventure
             for (int i = 0; i < rockCount; i++)
             {
                 int x = random.Next(0, this.Width - 50); // 돌의 x 좌표를 랜덤으로 설정
-                int y = -50 - i * 50; // 돌의 초기 y 좌표 (화면 위쪽에서 시작하되, 각 돌은 50픽셀씩 위로 이동하여 겹치지 않게 설정)
+                int y = -100 - i * 100; // 돌의 초기 y 좌표 (화면 위쪽에서 시작하되, 각 돌은 50픽셀씩 위로 이동하여 겹치지 않게 설정)
                 PictureBox rock = new PictureBox();
-                rock.Image = Properties.Resources.Icon_Skull; // 돌 이미지 설정
+                rock.Image = Properties.Resources.메테1오; // 돌 이미지 설정
                 rock.SizeMode = PictureBoxSizeMode.StretchImage;
-                rock.Size = new Size(50, 50);
+                rock.Size = new Size(51, 98);
                 rock.Location = new Point(x, y);
                 rock.BringToFront(); // 돌 이미지가 다른 요소 위로 올라가도록 설정
                 Boss.SendToBack();

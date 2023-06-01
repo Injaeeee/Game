@@ -450,7 +450,7 @@ namespace TheGreatWizardAdventure
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             MenuForm showForm = new MenuForm();
-            this.Hide();
+            this.Close();
             showForm.ShowDialog();
         }
 

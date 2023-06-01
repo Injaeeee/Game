@@ -12,11 +12,11 @@ namespace TheGreatWizardAdventure.Panel
 {
     public partial class _5 : UserControl
     {
+
         public _5()
         {
             InitializeComponent();
         }
-  
-        
+    
     }
 }

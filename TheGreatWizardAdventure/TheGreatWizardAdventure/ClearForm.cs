@@ -16,5 +16,17 @@ namespace TheGreatWizardAdventure
         {
             InitializeComponent();
         }
+
+        private void MenuButton_Click(object sender, EventArgs e)
+        {
+            MenuForm showForm = new MenuForm();
+            this.Hide();
+            showForm.ShowDialog();
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
